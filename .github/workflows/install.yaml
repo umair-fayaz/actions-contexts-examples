@@ -14,6 +14,7 @@ jobs:
         run: |
            curl -L "$(curl -s https://api.github.com/repos/tenable/terrascan/releases/latest | grep -o -E "https://.+?_Darwin_x86_64.tar.gz")" > terrascan.tar.gz
            tar -xf terrascan.tar.gz terrascan
-           cp terrascan  /usr/local/bin
-           terrascan version
+           xz -d ./terrascan
+           chmod +x ./terrascan
+           ./terrascan version
           
