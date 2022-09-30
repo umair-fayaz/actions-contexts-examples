@@ -13,5 +13,5 @@ jobs:
       - name: Install
         run: |
            pip install terrascan
-           terrascan
+           terrascan version
           
