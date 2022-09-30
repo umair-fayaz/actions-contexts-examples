@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install
         run: |
-           docker run accurics/terrascan help
+           docker run accurics/terrascan version
           
