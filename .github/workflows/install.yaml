@@ -30,6 +30,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: cluster-summary
-      - run: ls -la
+      - run: ls -la && cat cluster-summary.txt
        
           
