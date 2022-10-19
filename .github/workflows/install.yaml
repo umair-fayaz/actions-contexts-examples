@@ -29,7 +29,7 @@ jobs:
       - name: Download Cluster Summary
         uses: actions/download-artifact@v3
         with:
-          name: cluster-summary.txt
+          name: cluster-summary
       - run: ls -la
        
           
