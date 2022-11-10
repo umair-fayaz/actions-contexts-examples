@@ -5,31 +5,5 @@ on:
       - main
 
 jobs:
-  install:
-    name: Install
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install
-        run: |
-           mkdir -p reports
-           echo "hello" > reports/cluster-summary.txt
-      - name: Upload Report Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: cluster-summary
-          path: reports/
-  consume:
-    name: Consume
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      
-      - name: Download Cluster Summary
-        uses: actions/download-artifact@v3
-        with:
-          name: cluster-summary
-      - run: ls -la && cat cluster-summary.txt
-       
-          
+  call:
+    uses: umair-fayaz/my-aws/.github/workflows/demo_workflow.yml@main
