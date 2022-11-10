@@ -7,3 +7,4 @@ on:
 jobs:
   call:
     uses: umair-fayaz/my-aws/.github/workflows/demo_workflow.yml@main
+    secrets: inherit
