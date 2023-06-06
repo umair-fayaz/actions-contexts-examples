@@ -15,5 +15,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: build-${{ github.run_number }}
           files: myzip.zip
 
