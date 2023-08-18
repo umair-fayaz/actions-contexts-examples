@@ -11,11 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Create ZIP file
-        run: touch samplefile && zip myzip.zip samplefile
+        run: mkdir target && touch target/cchereports-1.0.0.omod && ls target
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           name: Build ${{ github.run_number }}
           tag_name: build-${{ github.run_number }}
-          files: myzip.zip
+          files: target/cchereports-1.0.0.omod
 
