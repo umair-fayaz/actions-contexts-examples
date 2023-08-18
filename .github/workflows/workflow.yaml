@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          repository: 'example-image'
+          repository: 'umair-fayaz/example-image'
       - run: ls
       - name: Create ZIP file
         run: mkdir target && touch target/cchereports-1.0.0.omod && echo "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla" > target/cchereports-1.0.0.omod && ls target && cat target/cchereports-1.0.0.omod 
