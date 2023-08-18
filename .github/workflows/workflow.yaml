@@ -13,6 +13,9 @@ jobs:
         with:
           repository: 'umair-fayaz/example-image'
       - run: ls
-      - name: Create ZIP file
-        run: mkdir target && touch target/cchereports-1.0.0.omod && echo "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla" > target/cchereports-1.0.0.omod && ls target && cat target/cchereports-1.0.0.omod 
-      - run: ls /
+      - run: cp Dockerfile /tmp/
+      - run: ls /tmp
+      - uses: actions/checkout@v3
+      - run: ls 
+      - run: cp /tmp/Dockerfile .
+      - run: ls 
