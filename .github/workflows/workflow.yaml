@@ -22,4 +22,3 @@ jobs:
           retention-days: 90
           path: |
             ./kustomize-output
-
