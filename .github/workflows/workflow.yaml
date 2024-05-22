@@ -5,13 +5,13 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: kustomize output
         id: kbuild
         continue-on-error: true
         run: |
           mkdir kustomize-output
-          touch ./kustomize-output/file1.txt
-          touch ./kustomize-output/file2.txt
+          kustomize build . -o ./kustomize-output
       - run:  ls ./kustomize-output/
 
       - name: Upload manifest
