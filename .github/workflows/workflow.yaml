@@ -22,23 +22,4 @@ jobs:
           retention-days: 90
           path: |
             ./kustomize-outputname: Make a release and upload zip
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-jobs:
-  release:
-    name: Make a release and upload the zip to it
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: 'umair-fayaz/example-image'
-      - run: ls
-      - run: cp Dockerfile /tmp/
-      - run: ls /tmp
-      - uses: actions/checkout@v3
-      - run: ls 
-      - run: cp /tmp/Dockerfile .
-      - run: ls 
+
