@@ -12,6 +12,7 @@ jobs:
           mkdir kustomize-output
           touch ./kustomize-output/file1.txt
           touch ./kustomize-output/file2.txt
+      - run:  ls ./kustomize-output/
 
       - name: Upload manifest
         continue-on-error: true
